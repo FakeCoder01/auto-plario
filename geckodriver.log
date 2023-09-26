@@ -10227,3 +10227,47 @@ console.warn: LoginRecipes: "Falling back to a synchronous message for: https://
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://chat.openai.com."
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://chat.openai.com."
 JavaScript warning: https://tcr9i.chat.openai.com/cdn/fc/js/6af2c0d87b9879cbf3365be1a208293f84d37b1e/standard/funcaptcha_api.js?onload=loadChallenge, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1695623167887	geckodriver	INFO	Listening on 127.0.0.1:49532
+1695623170950	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "-profile" "C:\\Users\\Leo Asmanov\\FirefoxProfiles\\Main" "--remote-debugging-port" "49533" "--remote-allow-hosts" "localhost" "-no-remote"
+Read port: 65146
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1695623171265	Marionette	INFO	Marionette enabled
+1695623171297	Marionette	INFO	Listening on port 49543
+WebDriver BiDi listening on ws://127.0.0.1:49533
+DevTools listening on ws://127.0.0.1:49533/devtools/browser/e0795c57-f713-42ed-95ac-72c2c0df1ac5
+Read port: 49543
+1695623173115	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://moodle.tsu.ru."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://moodle.tsu.ru."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://moodle.tsu.ru."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://moodle.tsu.ru."
+JavaScript error: https://accounts.tsu.ru/bundles/jqueryhelpers?v=uCAbFftZyUtdhTsBT_5kjaaJSWmM_x74pD3MUe9WyDM1, line 1: TypeError: n.validator is undefined
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://accounts.tsu.ru."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://accounts.tsu.ru."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://moodle.tsu.ru."
+1695623196207	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://www.googletagmanager.com/gtag/js?id=G-SY4H7RLVKS, line 497: Script terminated by timeout at:
+ba.km@https://www.googletagmanager.com/gtag/js?id=G-SY4H7RLVKS:497:4
+ba.jm/k/<@https://www.googletagmanager.com/gtag/js?id=G-SY4H7RLVKS:494:494
+Pj@https://www.googletagmanager.com/gtag/js?id=G-SY4H7RLVKS:253:235
+bk@https://www.googletagmanager.com/gtag/js?id=G-SY4H7RLVKS:256:349
+k@https://www.googletagmanager.com/gtag/js?id=G-SY4H7RLVKS:494:480
+c@https://www.googletagmanager.com/gtag/js?id=G-SY4H7RLVKS:298:169
+vn@https://www.googletagmanager.com/gtag/js?id=G-SY4H7RLVKS:299:269
+ba.jm@https://www.googletagmanager.com/gtag/js?id=G-SY4H7RLVKS:495:13
+c@https://www.googletagmanager.com/gtag/js?id=G-SY4H7RLVKS:512:1035
+iw@https://www.googletagmanager.com/gtag/js?id=G-SY4H7RLVKS:378:298
+hw.prototype.flush@https://www.googletagmanager.com/gtag/js?id=G-SY4H7RLVKS:381:263
+hw.prototype.push@https://www.googletagmanager.com/gtag/js?id=G-SY4H7RLVKS:379:207
+aw@https://www.googletagmanager.com/gtag/js?id=G-SY4H7RLVKS:376:712
+wF/<@https://www.googletagmanager.com/gtag/js?id=G-SY4H7RLVKS:513:153
+ba.zk/<@https://www.googletagmanager.com/gtag/js?id=G-SY4H7RLVKS:465:126
+ba.zk/c/<@https://www.googletagmanager.com/gtag/js?id=G-SY4H7RLVKS:464:420
+invokeTask@https://my.plario.ru/polyfills-es2019.876a780e734e1b8b0d43.js:1:7211
+runTask@https://my.plario.ru/polyfills-es2019.876a780e734e1b8b0d43.js:1:2620
+invokeTask@https://my.plario.ru/polyfills-es2019.876a780e734e1b8b0d43.js:1:8261
+p@https://my.plario.ru/polyfills-es2019.876a780e734e1b8b0d43.js:1:20542
+f@https://my.plario.ru/polyfills-es2019.876a780e734e1b8b0d43.js:1:20788
+
+1695623223253	Marionette	INFO	Stopped listening on port 49543
