@@ -96,8 +96,9 @@ class LoginManager:
             print("Error LoginManager.login_to_plario() : ", err)
 
 class AttemptManager:
-    def __init__(self, plario_tab) -> None:
+    def __init__(self, plario_tab, attempt_id) -> None:
         self.plario_tab = plario_tab
+        self.attempt_id = attempt_id
         self.count = 0
 
     def start_test(self):
@@ -108,7 +109,7 @@ class AttemptManager:
             startbutton.click()
             print(Fore.MAGENTA + Back.YELLOW + '\n# Test started' + Style.RESET_ALL + '\n\n')
 
-
+            browser.execute_script("alert('Change math render and Go to terminal & press any Key')")
             input("Please change the math render and then press Any key to continue : ")
             time.sleep(5)
 
@@ -123,7 +124,7 @@ class AttemptManager:
         return {
             'module_id' : browser.execute_script("return window.localStorage.getItem('plario.selectedModuleId');"),
             'teacher_course_id' : browser.execute_script("return window.localStorage.getItem('plario.selectedCourseId');"),
-            'attempt_id' : PUT_YOUR_ATTEMPT_ID, # ( a 7 digit int) , # browser.execute_script("return window.localStorage.getItem('key');"),
+            'attempt_id' : self.attempt_id, # browser.execute_script("return window.localStorage.getItem('key');"),
             'auth_token' : browser.execute_script("return window.localStorage.getItem('plario.access_token');")
         }
 
@@ -195,14 +196,14 @@ class AttemptManager:
                 except:
                     break
             return -1
-def initiate_the_buzz(email:str, password:str, course_url:str) -> bool:
+def initiate_the_buzz(email:str, password:str, course_url:str, attempt_id:int) -> bool:
     try:
         print("\n-------Started------\n")
         login_manager = LoginManager(email=email, password=password, course_url=course_url)
         login_manager.login_to_moodle()
         plario_login = login_manager.login_to_plario()
 
-        attempt_manager = AttemptManager(plario_tab=plario_login)
+        attempt_manager = AttemptManager(plario_tab=plario_login, attempt_id=attempt_id)
         attempt_manager.start_test()
         for i in range(0, 20):
             i += attempt_manager.submit_answer()
@@ -214,6 +215,11 @@ def initiate_the_buzz(email:str, password:str, course_url:str) -> bool:
 
 if __name__ == "__main__":
 
+
+    # PLARIO_ATTEMP_ID. Find in plario network tab /api/checkAnswer/
+    ATTEMPT_ID = 'YOUR_ATTEMPT_ID' # ( a 7 digit int)
+
+
     # YOUR TSU ACCOUNT EMAIL
     EMAIL = "EMAIL"
 
@@ -223,7 +229,7 @@ if __name__ == "__main__":
     # MOODLE COURSE URL
     COURSE_URL = "https://moodle.tsu.ru/mod/lti/view.php?id=364399"
         
-    work = initiate_the_buzz(EMAIL, PASSWORD, COURSE_URL)
+    work = initiate_the_buzz(EMAIL, PASSWORD, COURSE_URL, ATTEMPT_ID)
 
     if work:
         print("You nailed it :)")
