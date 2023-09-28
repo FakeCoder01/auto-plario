@@ -26,13 +26,13 @@ if __name__ == "__main__":
 
 
     # PLARIO_ATTEMP_ID. Find in plario network tab. endpoint : /api/checkAnswer/  (check attemptID in payload)
-    ATTEMPT_ID = 4292487 # 'ATTEMP_ID' # ( a 7 digit int)
+    ATTEMPT_ID = 'ATTEMP_ID' # ( a 7 digit int)
 
     # YOUR TSU ACCOUNT EMAIL
-    EMAIL = "ayonsamajder@gmail.com" #"email"
+    EMAIL = "email"
 
     # YOUR TSU ACCOUNT PASSWORD
-    PASSWORD = "Ayon@2003" # "password"
+    PASSWORD = "password"
 
     # MOODLE COURSE URL
     COURSE_URL = "https://moodle.tsu.ru/mod/lti/view.php?id=364399"
