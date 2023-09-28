@@ -1,4 +1,10 @@
 from src.solver import LoginManager, AttemptManager
+from dotenv import load_dotenv
+import os, logging
+
+
+load_dotenv()
+logging.basicConfig(filename="debug.log", format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 
 def start_and_solve(email:str, password:str, course_url:str, attempt_id:int) -> bool:
     try:
@@ -19,23 +25,15 @@ def start_and_solve(email:str, password:str, course_url:str, attempt_id:int) -> 
             return False
     
     except Exception as err:
+        logging.error(err)
         print("Error buzz_main : ", err)
         return False
 
 if __name__ == "__main__":
-
-
-    # PLARIO_ATTEMP_ID. Find in plario network tab. endpoint : /api/checkAnswer/  (check attemptID in payload)
-    ATTEMPT_ID = 'ATTEMP_ID' # ( a 7 digit int)
-
-    # YOUR TSU ACCOUNT EMAIL
-    EMAIL = "email"
-
-    # YOUR TSU ACCOUNT PASSWORD
-    PASSWORD = "password"
-
-    # MOODLE COURSE URL
-    COURSE_URL = "https://moodle.tsu.ru/mod/lti/view.php?id=364399"
+    ATTEMPT_ID = os.getenv('ATTEMPT_ID')
+    EMAIL = os.getenv('EMAIL')
+    PASSWORD = os.getenv('PASSWORD')
+    COURSE_URL = os.getenv('COURSE_URL')
         
     work = start_and_solve(EMAIL, PASSWORD, COURSE_URL, ATTEMPT_ID)
 
