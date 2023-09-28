@@ -1,6 +1,6 @@
 ## Plario Automate All Task
 
-##### It uses Microsoft Edge as the webdriver, if you want to use other that this, configure it accordingly.
+#### It uses Microsoft Edge as the webdriver, if you want to use other that this, configure it accordingly.
 
 ### Steps:
 1. Install dependencies
@@ -8,26 +8,18 @@
 pip install -r requirements.txt
 ```
 
-
-2. Go to the `src` directory 
-```
-cd src
-```
+2. Open plario and go to the `network tab`. Find `attempId` in under the payload of /api/checkAnswer/ 
 
 
-3. Change the credentials:
-    ~ Put Email, Attempt ID and  Password in respected field in the file `solve.py`
+3. Change the credentials in the file `plario.py`. put Email, Attempt ID and  Password in respected field.
 
 
 4. Run the script
 ```
-python solve.py
+python plario.py
 ```
 
-5. You need to change the MathJax Render Settings to `Plain Source`
-`Right Click on the Equation -> Math Render -> Settings -> Plain Source`
-
-6. Go back to terminal and press any key
-
-
-
+```
+I do not suggest or support using this. I wrote this code entirely for learning purposes only. 
+Only you will be responsible if you use this cript.
+```

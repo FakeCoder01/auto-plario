@@ -9,6 +9,7 @@ class GETPlarioAnswerAPI:
         self.auth_token = auth_token
 
     def get_answer(self):
+
         try:
             headers = {
                 "accept": "application/json, text/plain, */*",
@@ -52,6 +53,10 @@ class GETPlarioAnswerAPI:
 
             result = post_answer.json()
             right_answer_id = result['rightAnswerId']
+
+            if right_answer_id == choosen_answer_id :
+                return True
+            
             return {
                 'answer_id' : right_answer_id,
                 'answer_text' : api_answer_map[right_answer_id]
