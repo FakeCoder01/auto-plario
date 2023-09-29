@@ -34,7 +34,7 @@ iv. Select the module by yourself
 ```
 
 ```
-Importtant Note:
+Important Note:
 I do not suggest or support using this. I wrote this code entirely for learning purposes only. 
 Only you will be responsible if you use this script.
 ```
