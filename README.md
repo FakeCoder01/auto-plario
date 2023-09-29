@@ -8,7 +8,7 @@
 pip install -r requirements.txt
 ```
 
-2. Open plario and go to the `network tab`. Find `attempId` in under the payload of /api/checkAnswer/ 
+2. Open plario and go to the `network tab`. Find `attempId` in under the payload of /api/adaptiveLearning/checkAnswer/ 
 
 ![How to Find attempId in Network Tab](images/edge-network-tab.png)
 
